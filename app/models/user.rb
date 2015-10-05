@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable,
          :validatable
 
-  mount_uploader :profile_photo, ProfilePhotoUploader
+  # mount_uploader :profile_photo, ProfilePhotoUploader
 
   def admin?
    role == "admin"
