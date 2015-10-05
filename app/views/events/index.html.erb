@@ -1,5 +1,8 @@
-<h1>Events</h1>
-
-<% @events.each do |event| %>
-  <li><%= event.title  %></li>
-<% end %>
+<div class="text-center category-header">
+  <h4>Events</h4>
+</div>
+<div class="event-index">
+  <% @events.each do |event| %>
+    <li><%= event.title  %></li>
+  <% end %>
+</div>
