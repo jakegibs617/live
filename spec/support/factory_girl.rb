@@ -9,4 +9,10 @@ FactoryGirl.define do
     role 'member'
   end
 
+  factory :event do
+    sequence(:title) { |n| "Bar#{n}" }
+    image_url 'http://i.imgur.com/CWqBQuy.jpg'
+    description 'badd assss cant wait to go'
+    user
+  end
 end
