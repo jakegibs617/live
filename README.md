@@ -1,3 +1,5 @@
+![Build Status](https://codeship.com/projects/106668/status?branch=master)![Code Climate](https://codeclimate.com/github/jakegibs617/live/.png) ![Coverage Status](https://coveralls.io/repos/jakegibs617/live/badge.png)
+
 == README
 
 This README would normally document whatever steps are necessary to get the
