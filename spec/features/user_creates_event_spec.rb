@@ -16,7 +16,7 @@ feature 'user creates event', %{
 
     fill_in "Title", with: event.title
     fill_in "Description", with: event.description
-		fill_in "Image Url", with: event.image_url
+    fill_in "Image Url", with: event.image_url
 
     click_on "Submit"
 
