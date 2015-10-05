@@ -1,0 +1,29 @@
+<div class="container">
+  <%= form_for @event do |f| %>
+    <div class="row">
+      <div class="field columns small-3">
+        <%= f.label :title %>
+        <%= f.text_field :title, class: "text-field" %>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="field columns small-6">
+        <%= f.label :description %>
+        <%= f.text_area :description, class: "text-field" %>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="field columns small-6">
+        <%= f.label :image_url, "Image Url" %>
+        <%= f.text_field :image_url, class: "text-field" %>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <%= f.submit "Submit", class: "submit-form" %>
+    </div>
+  <% end %>
+  <br>
+</div>
