@@ -8,10 +8,23 @@
         null,
         1,
         null,
-        null,
+        1,
         null,
         1,
         2,
+        null,
+        null
+      ],
+      "/Users/jacobkgiberson/Desktop/breakabletoy/live/app/uploaders/profile_photo_uploader.rb": [
+        1,
+        1,
+        0,
+        null,
+        1,
+        null,
+        null,
+        1,
+        0,
         null,
         null
       ],
@@ -76,6 +89,6 @@
         null
       ]
     },
-    "timestamp": 1444147324
+    "timestamp": 1444151609
   }
 }
