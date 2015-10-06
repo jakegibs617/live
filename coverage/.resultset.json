@@ -28,7 +28,9 @@
       "/Users/jacobkgiberson/Desktop/breakabletoy/live/app/controllers/events_controller.rb": [
         1,
         1,
-        8,
+        null,
+        1,
+        7,
         null,
         null,
         1,
@@ -54,7 +56,6 @@
         1,
         2,
         null,
-        null,
         null
       ],
       "/Users/jacobkgiberson/Desktop/breakabletoy/live/app/controllers/application_controller.rb": [
@@ -67,14 +68,14 @@
         1,
         null,
         1,
-        16,
-        16,
-        16,
-        16,
+        17,
+        17,
+        17,
+        17,
         null,
         null
       ]
     },
-    "timestamp": 1444078711
+    "timestamp": 1444097543
   }
 }

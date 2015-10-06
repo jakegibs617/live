@@ -4,6 +4,9 @@
   <title>Live</title>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/foundation/foundation.js"></script>
+  <script src="js/foundation/foundation.orbit.js"></script>
 </head>
 <body>
 
@@ -47,4 +50,8 @@
   <%= javascript_include_tag 'application' %>
   <%= yield :extra_footer %>
 </body>
+
+<footer>
+  <div class="footer"> copyright Jacob Giberson 2015</div>
+</footer>
 </html>
