@@ -70,14 +70,14 @@ $facebook-color: #3b5998;
 $twitter-color: #55acee;
 $google-color: #d50f25;
 $text-transform: uppercase;
-$icon-size: 2rem;
+$icon-size: .75rem;
 
 .split.button {
   width: 10%;
 
   &.facebook {
     background: $facebook-color;
-    text-transform: $text-transform;
+    // text-transform: $text-transform;
 
     span {
       background: darken($facebook-color, 10%);
@@ -95,7 +95,7 @@ $icon-size: 2rem;
 
   &.twitter {
     background: $twitter-color;
-    text-transform: $text-transform;
+    // text-transform: $text-transform;
 
     span {
       background: darken($twitter-color, 10%);
@@ -113,7 +113,7 @@ $icon-size: 2rem;
 
   &.google {
     background: $google-color;
-    text-transform: $text-transform;
+    // text-transform: $text-transform;
 
 
     span {
@@ -234,4 +234,10 @@ a {
 
 .button:hover {
   background-color: $light-grey;
+}
+
+.event-description {
+  background-color: $grey;
+  color: $foot;
+  padding: 50px;
 }

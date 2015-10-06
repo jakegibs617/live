@@ -1,0 +1,35 @@
+<div class="text-center category-header">
+  <h4> Edit Comment </h4>
+</div>
+
+<div class="container">
+  <%= form_for [@event, @comment] do |f| %>
+    <div class="row">
+      <div class="field columns small-3">
+        <%= f.label :rating %>
+        <%= f.collection_radio_buttons :rating, Comment::RATINGS, :to_i, :to_i %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="field columns small-3">
+        <%= f.label :body %>
+        <%= f.text_area :body, class: "text-field" %>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="field columns small-3">
+        <%= f.label :image_url %>
+        <%= f.text_area :image_url, class: "text-field" %>
+      </div>
+    </div>
+    <br>
+    <div class="row text-center">
+      <div class="field columns small-3">
+        <%= f.submit "Submit", class: "submit-form" %>
+      </div>
+    </div>
+  <% end %>
+  <br>
+  <br>
+</div>

@@ -15,4 +15,12 @@ FactoryGirl.define do
     description 'badd assss cant wait to go'
     user
   end
+
+  factory :comment do
+    image_url 'http://i.imgur.com/CWqBQuy.jpg'
+    body 'badd assss cant wait to go'
+    rating 5
+    user
+    event
+  end
 end
