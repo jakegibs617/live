@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="small-3-centered columns">
+    <div data-orbit
+    data-options="animation:fade;
+                  timer_speed: 3000;
+                  slide_number: false;
+                  pause_on_hover:false;
+                  animation_speed:500;
+                  navigation_arrows:true;
+                  bullets:true;
+                  caption_class: orbit-caption;">
+      <% @events.each do |event| %>
+
+      <h4 class="text-center">  <%= link_to image_tag(event.image_url,
+            title: event.title, size: "1000x1000"), root_path %> <%= event.title %></h4>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -3,7 +3,7 @@ require 'rails_helper'
 feature 'user creates event', %{
   As a signed up user
   I want to create a new event
-  So that other users can joim rate and review it
+  So that other users can join rate and review it
 } do
 
   scenario 'creates event succcessfully' do
@@ -21,7 +21,7 @@ feature 'user creates event', %{
     click_on "Submit"
 
     expect(page).to have_content("Event Added!")
-    expect(events_path).to eq(current_path)
+    expect(root_path).to eq(current_path)
   end
 
   scenario 'create unsucccessful event, without title' do

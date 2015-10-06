@@ -20,6 +20,7 @@ $white: #ffffff;
 $hover: #FFFF99;
 $grey: #333333;
 $foot: #888888;
+$light-grey: #555555;
 
 .container {
   .text-field {
@@ -34,18 +35,16 @@ $foot: #888888;
     font-style: italic;
     padding-bottom: 15px;
   }
-
-  .submit-form {
-    background: rgba(0, 0, 0, 0.6);
-    color: $white;
+}
+  .submit-form button {
     font: bold 12px/24px Helvetica, Sans-Serif;
     margin-bottom: 40px;
     margin-top: 10px;
     padding: 1px;
     padding-left: 10px;
+    margin-left: 5%;
     padding-right: 10px;
   }
-}
 
 h4 {
   background: rgba(65, 92, 108, 0.5);
@@ -207,11 +206,30 @@ a:hover {
 
 .social {
   text-align: center;
+  margin-left: -120px;
+}
+
+a {
+  color: $foot;
 }
 
 .footer {
+  background: $grey;
   margin: 20px;
+  padding: 20px;
   font-size: 1em;
   color: $foot;
   font: Helvetica, Sans-Serif;
+  position:fixed;
+  left:-20px;
+  bottom:-20px;
+  width:100%;
+}
+
+.button {
+  margin-left: 100px;
+  background-color: $grey;
+}
+.button:hover{
+  background-color: $light-grey;
 }
