@@ -23,11 +23,4 @@
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
 
-<% @events.each do |event| %>
-	<li>
-		<img src="<%= event.image_url %>" alt="slide <%= event.id %>" />
-		<div class="orbit-caption">
-			<%= event.description %>
-		</div>
-	</li>
-<% end %>
+https://live-events.herokuapp.com/
