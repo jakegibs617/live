@@ -14,6 +14,3 @@ User.create(email: "member@email.com",
             updated_at: "2015-10-05 16:15:56.751509",
             username: "member",
             role: "member")
-
-# Event.create(title: "JJ Foleys",
-# "http://cdn.justluxe.com/phpThumb/phpThumb.php?src=/articles/galleries/56299.jpg&w=570"
