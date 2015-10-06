@@ -64,6 +64,6 @@ class CommentsController < ApplicationController
 
   def comment_params
     params.require(:comment).permit(:rating, :body, :event_id, :user,
-                   :image_url)
+                                    :image_url)
   end
 end
