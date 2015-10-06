@@ -12,7 +12,8 @@
       <% @events.each do |event| %>
 
       <h4 class="text-center">  <%= link_to image_tag(event.image_url,
-            title: event.title, size: "1000x1000"), root_path %> <%= event.title %></h4>
+            title: event.title, size: "1000x1000"), event_path(event) %>
+            <%= link_to event.title, event_path(event) %></h4>
       <% end %>
     </div>
   </div>

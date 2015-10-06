@@ -5,6 +5,12 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
+  def show
+    @event = Event.find(params[:id])
+    @user = current_user
+    @comments = @event.votes_order
+  end
+
   def new
     @event = Event.new
   end

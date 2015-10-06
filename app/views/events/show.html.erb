@@ -1,0 +1,35 @@
+
+<div class="row">
+	<h4><%= @event.title %></h4>
+	<h4 class="text-center">  <%= image_tag(@event.image_url,
+				title: @event.title, size: "1000x1000") %>
+				</h4>
+	<div class="event-description small-6-centered columns"><%= @event.description %>
+		<hr>
+		<p><%= link_to "Add Comment", new_event_comment_path(@event), class: "add-comment" %></p>
+    <% if @comments.present? %>
+      <% @comments.each do |comment| %>
+        <ul>
+          <div class="row">
+            <div class="columns small-6">
+              <li><%= comment.body.capitalize %></li>
+              <li>Rating: <%= comment.rating %></li>
+							<h4 class="text-center">  <%= image_tag(comment.image_url,
+										title: @event.title, size: "1000x1000") %>
+										</h4>
+                <% if current_user.admin? || (@user == comment.user) %>
+		              <li><%= link_to "Edit",
+									        edit_event_comment_path(@event, comment) %> |
+		                  <%= link_to "Delete",
+											    event_comment_path(@event, comment),
+													method: :delete %>
+								 </li>
+                <% end %>
+								<hr>
+            </div>
+          </div>
+        </ul>
+      <% end %>
+    <% end %>
+  </div>
+</div>
