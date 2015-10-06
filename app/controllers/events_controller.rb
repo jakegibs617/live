@@ -16,7 +16,7 @@ class EventsController < ApplicationController
 
     if @event.save
       flash[:accepted] = "Event Added!"
-      redirect_to events_path
+      redirect_to root_path
     else
       flash[:errors] = @event.errors.full_messages.join(". ")
       render :new
