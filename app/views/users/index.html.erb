@@ -1,7 +1,7 @@
 <% if current_user.admin? %>
   <br>
   <div class="row">
-    <ul class="admin-list">
+    <ul class="admin-list ">
       <strong>Administrators:</strong>
       <% @admins.each do |admin| %>
         <li><%= admin.username%> | <%= admin.email%></li>
@@ -11,15 +11,20 @@
 <% end %>
 
 
-  <ul class="member-list">
-    <strong>Members:</strong>
+  <ul class="member-list ">
 
 
-    <div class="small-2-centered columns">
+    <div class="small-4-centered columns event-description text-center">
+    <h4>Members:</h4>
     <% for user in @users %>
       <div class="user">
         <p>
+        <hr>
+          <div class="text-center">
+            <%= image_tag(user.profile_photo, size: "200x200") %>
+        				</div>
           <strong><%=h user.username %> </strong>
+
           | <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
             <% if current_user.admin? %>
 
