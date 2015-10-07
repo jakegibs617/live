@@ -6,21 +6,28 @@
 * System dependencies
 
 * Configuration
+      AWS_ACCESS_KEY=""
+      SECRET_AWS_ACCESS_KEY=""
+      AWS_S3_BUCKET=""
 
 * Database creation
+      $rake db:create
+      $rake db:migrate
 
 * Database initialization
 
 * How to run the test suite
+      $rake spec
 
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
+     $rails s
 * ...
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+trello task list:
+https://trello.com/b/oZAUPcCn/live-app
 
 https://live-events.herokuapp.com/
+
+er diagram: coming soon
