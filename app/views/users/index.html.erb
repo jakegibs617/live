@@ -1,20 +1,40 @@
-<br>
-<div class="row">
-  <ul class="admin-list">
-    <strong>Administrators:</strong>
-    <% @admins.each do |admin| %>
-      <li><%= admin.username%> | <%= admin.email%></li>
-    <% end %>
-  </ul>
-    <hr>
+<% if current_user.admin? %>
+  <br>
+  <div class="row">
+    <ul class="admin-list ">
+      <strong>Administrators:</strong>
+      <% @admins.each do |admin| %>
+        <li><%= admin.username%> | <%= admin.email%></li>
+      <% end %>
+    </ul>
+      <hr>
+<% end %>
 
-  <ul class="member-list">
-    <strong>Members:</strong>
-    <% @members.each do |member| %>
-      <li><%= member.username%> | <%= member.email%></li>
-      <li><%= link_to "Delete This User", user_path(member), method: :delete %></li>
-      <li><%= link_to "Make Admin", user_path(member), method: :put %></li>
-      <br>
+
+  <ul class="member-list ">
+
+
+    <div class="small-4-centered columns event-description text-center">
+    <h4>Members:</h4>
+    <% for user in @users %>
+      <div class="user">
+        <p>
+        <hr>
+          <div class="text-center">
+            <%= image_tag(user.profile_photo, size: "200x200") %>
+        				</div>
+          <strong><%=h user.username %> </strong>
+
+          | <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
+            <% if current_user.admin? %>
+
+              | <%= link_to "Delete This User", user_path(user), method: :delete %>
+              | <%= link_to "Make Admin", user_path(user), method: :put %>
+            <% end %>
+          <div class="clear"></div>
+        </p>
+      </div>
     <% end %>
+    </div>
   </ul>
 </div>

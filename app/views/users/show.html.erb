@@ -1,0 +1,33 @@
+<div class="event-description text-center">
+
+  <h4>my profile</h4>
+
+  <p>Me: <%=h @user.username %></p>
+
+
+  <h2>Friends</h2>
+  <ul>
+    <% for friendship in @user.friendships %>
+      <li>
+        <hr>
+        <div class="text-center">
+          <%= image_tag(friendship.friend.profile_photo, size: "200x200") %>
+              </div>
+        <%=h friendship.friend.username %>
+        (<%= link_to "Unfriend", friendship, :method => :delete %>)
+      </li>
+    <% end %>
+  </ul>
+
+  <p><%= link_to "Find Friends", users_path %></p>
+
+  <h2>Friended by Users</h2>
+  <ul>
+    <% for user in @user.inverse_friends %>
+      <li><%=h user.username %></li>
+      <div class="text-center">
+        <%= image_tag(user.profile_photo, size: "200x200") %>
+            </div>
+    <% end %>
+  </ul>
+</div>
