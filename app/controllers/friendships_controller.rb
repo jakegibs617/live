@@ -8,7 +8,7 @@ class FriendshipsController < ApplicationController
       flash[:error] = "Unable to add friend."
       redirect_to root_url
     end
-	end
+  end
 
   def destroy
     @friendship = current_user.friendships.find(params[:id])
