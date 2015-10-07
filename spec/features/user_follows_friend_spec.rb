@@ -8,7 +8,6 @@ feature 'user follows friend', %{
 } do
   scenario 'sees friend in event show page' do
     event = FactoryGirl.create(:event)
-    user = FactoryGirl.create(:user)
 
     sign_in(event.user)
     visit users_path
