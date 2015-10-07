@@ -23,12 +23,11 @@
           <li><%= link_to 'Create Event', new_event_path %></li>
 
         <%- if current_user -%>
-          <%- if current_user.role == "admin" -%>
-            <li><%= link_to 'Admin', user_registration_path %></li>
-          <% end %>
+            <li><%= link_to 'Find Friends', users_path %></li>
 
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
           <li><%= link_to 'Profile', edit_user_registration_path %></li>
+          <li><%= link_to 'My Friends', user_path(current_user) %></li>
           <li class="profile-photo"><%= link_to image_tag(current_user.profile_photo), edit_user_registration_path %></li>
 
         <%- else -%>

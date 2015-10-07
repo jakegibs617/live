@@ -3,9 +3,9 @@ require 'factory_girl'
 FactoryGirl.define do
   factory :user do
     sequence(:email) { |n| "users#{n}@example.com" }
+    sequence(:username) { |n| "billy#{n}" }
     password 'password'
     password_confirmation 'password'
-    username 'bobbydroptables'
     role 'member'
   end
 
@@ -23,4 +23,9 @@ FactoryGirl.define do
     user
     event
   end
+
+  # factory :friendship do
+  #   friend_id 8
+  #   user
+  # end
 end
