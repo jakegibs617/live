@@ -6,7 +6,7 @@
   <%= devise_error_messages! %>
   <%= f.hidden_field :reset_password_token %>
 <div class="row">
-  <div class="columns small-4">
+  <div class="columns small-4-centered">
     <div class="field">
       <%= f.label :password, "New password" %><br>
       <% if @minimum_password_length %>
@@ -18,7 +18,7 @@
 </div>
 
 <div class="row">
-  <div class="columns small-4">
+  <div class="columns small-4-centered">
     <div class="field">
       <%= f.label :password_confirmation, "Confirm new password" %><br>
       <%= f.password_field :password_confirmation, autocomplete: "off" %>
@@ -27,7 +27,7 @@
 </div>
 
 <div class="row">
-  <div class="columns small-4">
+  <div class="columns small-4-centered">
     <div class="actions">
       <%= f.submit "Change my password", class: "submit-form button" %>
     </div>

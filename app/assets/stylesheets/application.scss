@@ -56,11 +56,6 @@ h4 {
   padding: 10px;
 }
 
-ul {
-  list-style-type: none;
-  margin-left: 4px;
-}
-
 .profile-photo {
   margin-right: 5px;
   width: 50px;
@@ -114,7 +109,6 @@ $icon-size: 0.75rem;
   &.google {
     background: $google-color;
     // text-transform: $text-transform;
-
 
     span {
       background: darken($google-color, 10%);
@@ -240,4 +234,15 @@ a {
   background-color: $grey;
   color: $foot;
   padding: 50px;
+}
+
+.back-ground-text {
+  background-color: rgba(65, 92, 108, 0.5);
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 10px;
+}
+
+.no-bullets {
+  list-style-type: none;
 }

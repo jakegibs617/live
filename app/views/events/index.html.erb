@@ -11,22 +11,29 @@
         <div class="service-icon-box">
           <%= image_tag "live.jpg", class: "service-icon" %>
         </div>
-        <h4 class="service-heading"><p>Jumping, full of people, exciting.
+        <h4 class="service-heading show-for-large-only"><p>Jumping, full of people, exciting.
                                     Something was very enjoyable</p>-Urban Dictionary</h4>
+        <h4 class="service-heading hide-for-large">Live</h4>
         <h3 class="service-description"><%= link_to 'New Event', new_event_path %></h3>
       </div>
     </div>
   </div>
+        <h3 class="text-center show-for-small-only back-ground-text"><%= link_to 'Enter', new_event_path %></h3>
 <br>
 <br>
 <br>
 <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
 
-<div class="social">
-  <button href="#" class="facebook round button split"> <span></span>Facebook</button>
-  <button href="#" class="twitter round button split"> <span></span>Twitter</button>
-  <button href="#" class="google round button split"> <span></span>Google+</button>
-<br>
+<div class="social show-for-small-only">
+  <li class="no-bullets"><a href="https://www.facebook.com/" class="facebook round button split"> <span></span>Facebook</a></li>
+  <li class="no-bullets"><a href="https://twitter.com/" class="twitter round button split"> <span></span>Twitter</a></li>
+  <li class="no-bullets"><a href="https://plus.google.com/" class="google round button split"> <span></span>Google+</a></li>
+</div>
+<div class="social hide-for-small">
+  <a href="https://www.facebook.com/" class="facebook round button split"> <span></span>Facebook</a>
+  <a href="https://twitter.com/" class="twitter round button split"> <span></span>Twitter</a>
+  <a href="https://plus.google.com/" class="google round button split"> <span></span>Google+</a>
+</div>
 <br>
 <br>
 <br>
@@ -38,10 +45,15 @@
 <% if current_user %>
   <%= render partial: 'index' %>
   <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
-  <div class="social">
-    <button href="#" class="facebook round button split"> <span></span>Facebook</button>
-    <button href="#" class="twitter round button split"> <span></span>Twitter</button>
-    <button href="#" class="google round button split"> <span></span>Google+</button>
+  <div class="social show-for-small-only">
+    <li class="no-bullets"><a href="https://www.facebook.com/" class="facebook round button split"> <span></span>Facebook</a></li>
+    <li class="no-bullets"><a href="https://twitter.com/" class="twitter round button split"> <span></span>Twitter</a></li>
+    <li class="no-bullets"><a href="https://plus.google.com/" class="google round button split"> <span></span>Google+</a></li>
+  </div>
+  <div class="social hide-for-small">
+    <a href="https://www.facebook.com/" class="facebook round button split"> <span></span>Facebook</a>
+    <a href="https://twitter.com/" class="twitter round button split"> <span></span>Twitter</a>
+    <a href="https://plus.google.com/" class="google round button split"> <span></span>Google+</a>
   </div>
 <% end %>
 <br>

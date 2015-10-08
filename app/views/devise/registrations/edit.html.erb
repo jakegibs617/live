@@ -3,7 +3,7 @@
 </div>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
 <div class="row">
-  <div class="columns small-4">
+  <div class="columns small-4-centered">
     <div class="field">
       <%= f.label :email %>
       <%= f.email_field :email, autofocus: true, class: "text-field" %>
@@ -17,7 +17,7 @@
 </div>
   <br>
 <div class="row">
-  <div class="columns small-4">
+  <div class="columns small-4-centered">
     <div class="field">
       <%= f.label :username %>
       <%= f.text_field :username, value: current_user.username , autofocus: true, class: "text-field"  %>
@@ -26,7 +26,7 @@
 </div>
   <br>
 <div class="row">
-  <div class="columns small-4">
+  <div class="columns small-4-centered">
     <div class="field">
       <%= f.label :profile_photo, "Profile Photo" %>
       <%= f.file_field :profile_photo %>
@@ -39,7 +39,7 @@
   <% end %>
   <br>
   <div class="row">
-    <div class="columns small-4">
+    <div class="columns small-4-centered">
       <div class="field">
         <%= f.label :password %> <em>(leave blank if you don't want to change it)</em>
         <%= f.password_field :password, autocomplete: "off", class: "text-field" %>
@@ -53,7 +53,7 @@
   </div>
   <br>
   <div class="row">
-    <div class="columns small-4">
+    <div class="columns small-4-centered">
       <div class="field">
         <%= f.label :password_confirmation %>
         <%= f.password_field :password_confirmation, autocomplete: "off", class: "text-field" %>
@@ -67,7 +67,7 @@
   </div>
   <br>
   <div class="row">
-    <div class="columns small-4">
+    <div class="columns small-4-centered">
       <div class="field">
         <%= f.label :current_password %> <em>(we need your current password to confirm your changes)</em>
         <%= f.password_field :current_password, autocomplete: "off", class: "text-field" %>
@@ -81,7 +81,7 @@
   </div>
   <br>
   <div class="row">
-    <div class="columns small-4">
+    <div class="columns small-4-centered">
       <div class="actions">
         <%= f.submit "Update", class: "submit-form button" %>
       </div>
@@ -90,7 +90,7 @@
 <% end %>
 <br>
 <div class="row">
-  <div class="columns small-4 text-center">
+  <div class="columns small-4-centered text-center">
     <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "submit-form button" %></p>
   </div>
 </div>
