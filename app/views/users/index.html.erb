@@ -1,7 +1,7 @@
 <% if current_user.admin? %>
   <br>
   <div class="row">
-    <ul class="admin-list ">
+    <ul class="admin-list-centered ">
       <strong>Administrators:</strong>
       <% @admins.each do |admin| %>
         <li><%= admin.username%> | <%= admin.email%></li>
