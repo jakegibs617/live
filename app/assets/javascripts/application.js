@@ -18,4 +18,4 @@
 
 $(function(){ $(document).foundation(); });
 
-$( ".error-explanation" ).delay(3500).fadeOut('slow');
+$( ".error-explanation" ).delay(3500).fadeOut("slow");
