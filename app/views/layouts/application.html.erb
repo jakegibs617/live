@@ -34,7 +34,11 @@
               </ul>
             </li>
 
-            <li class="profile-photo"><%= link_to image_tag(current_user.profile_photo), edit_user_registration_path %></li>
+            <%- if current_user.profile_photo? -%>
+              <li class="profile-photo"><%= link_to image_tag(current_user.profile_photo), edit_user_registration_path %></li>
+            <%- else -%>
+              <li class="profile-photo"><%= link_to image_tag("defaultavatar.jpg"), edit_user_registration_path %></li>
+            <%- end -%>
 
           <%- else -%>
             <li><%= link_to 'Sign Up', new_user_registration_path %></li>
@@ -45,7 +49,7 @@
   </nav>
 
   <%- flash.each do |key, value| -%>
-    <div class="flash flash-<%= key %> text-center">
+    <div class="flash flash-<%= key %> text-center error-explanation columns">
       <%= value %>
     </div>
   <%- end -%>

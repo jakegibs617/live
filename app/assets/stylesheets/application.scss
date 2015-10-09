@@ -246,3 +246,10 @@ a {
 .no-bullets {
   list-style-type: none;
 }
+
+.error-explanation {
+  background: $white;
+  color: $grey;
+  font-size: 1.2rem;
+  position: relative;
+}

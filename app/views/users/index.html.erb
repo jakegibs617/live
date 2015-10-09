@@ -21,7 +21,12 @@
         <p>
         <hr>
           <div class="text-center">
-            <%= image_tag(user.profile_photo, size: "200x200") %>
+            <%- if user.profile_photo? -%>
+              <%= image_tag(user.profile_photo, size: "200x200") %>
+            <%- else -%>
+              <%= image_tag("defaultavatar.jpg", size: "200x200")%>
+            <%- end -%>
+
         				</div>
           <strong><%=h user.username %> </strong>
 
