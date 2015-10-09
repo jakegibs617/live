@@ -11,7 +11,12 @@
       <li>
         <hr>
         <div class="text-center">
-          <%= image_tag(friendship.friend.profile_photo, size: "200x200") %>
+          <%- if friendship.friend.profile_photo? -%>
+            <%= image_tag(friendship.friend.profile_photo, size: "200x200") %>
+          <%- else -%>
+            <%= image_tag("defaultavatar.jpg", size: "200x200")%>
+          <%- end -%>
+
               </div>
         <%=h friendship.friend.username %>
         (<%= link_to "Unfriend", friendship, :method => :delete %>)
@@ -26,7 +31,13 @@
     <% for user in @user.inverse_friends %>
       <li><%=h user.username %></li>
       <div class="text-center">
-        <%= image_tag(user.profile_photo, size: "200x200") %>
+
+        <%- if user.profile_photo? -%>
+          <%= image_tag(user.profile_photo, size: "200x200") %>
+        <%- else -%>
+          <%= image_tag("defaultavatar.jpg", size: "200x200")%>
+        <%- end -%>
+
             </div>
     <% end %>
   </ul>
