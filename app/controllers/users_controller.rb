@@ -2,10 +2,6 @@ class UsersController < ApplicationController
   def show
     @user = current_user
   end
-  #
-  # def new
-  #   @user = User.new
-  # end
 
   def index
     @admins = User.where(role: "admin")
@@ -28,13 +24,5 @@ class UsersController < ApplicationController
 
     flash[:notice] = "User deleted."
     redirect_to users_path
-  end
-
-  protected
-
-  def authorize_user
-    if !user_signed_in? || !current_user.admin?
-      raise ActionController::RoutingError.new("Not Found")
-    end
   end
 end

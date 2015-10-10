@@ -1,50 +1,58 @@
+<br>
+
 <% if current_user.admin? %>
-  <br>
   <div class="row">
+
     <ul class="admin-list-centered">
       <strong>Administrators:</strong>
+
       <% @admins.each do |admin| %>
         <li><%= admin.username%> | <%= admin.email%></li>
       <% end %>
+
     </ul>
-      <hr>
+
+  </div>
+<hr>
 <% end %>
 
-  <ul class="member-list">
 
+<ul class="member-list">
+
+  <div class="row">
     <div class="small-4-centered columns event-description text-center">
     <h4>Members:</h4>
-    <% for user in @users %>
+
       <div class="user">
-        <p>
         <hr>
-        <% if user == current_user %>
-        <% else %>
-          <% if user.friendships != current_user.friendships %>
-          <% else %>
-            <div class="text-center">
-              <%- if user.profile_photo? -%>
-                <%= image_tag(user.profile_photo, size: "200x200") %>
-              <%- else -%>
-                <%= image_tag("defaultavatar.jpg", size: "200x200")%>
-              <%- end -%>
-    				</div>
+        <% @users.each do |user| %>
+          <% if user != current_user %>
 
-            <strong><%=h user.username %> </strong>
+              <div class="text-center">
+                <%- if user.profile_photo? -%>
+                  <%= image_tag(user.profile_photo, size: "200x200") %>
+                <%- else -%>
+                  <%= image_tag("defaultavatar.jpg", size: "200x200")%>
+                <%- end -%>
+      				</div>
 
-            | <%= link_to "Add Friend", friendships_path(friend_id: user), method: :post %>
+              <strong><%= user.username %> </strong>
+              | <%= link_to "Add Friend", friendships_path(friend_id: user), method: :post %>
+
               <% if current_user.admin? %>
-
                 | <%= link_to "Delete This User", user_path(user), method: :delete %>
                 | <%= link_to "Make Admin", user_path(user), method: :put %>
               <% end %>
-            <% end %>
-          <% end %>
 
-          <div class="clear"></div>
-        </p>
+          <% end %>
+        <% end %>
       </div>
-    <% end %>
     </div>
-  </ul>
-</div>
+  </div>
+</ul>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

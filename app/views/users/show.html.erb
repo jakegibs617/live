@@ -2,33 +2,41 @@
 
   <h4>My Profile</h4>
 
-  <p>Me: <%=h @user.username %></p>
+  <p>Me: <%= @user.username %></p>
 
   <h2>People You Follow</h2>
   <ul>
-    <% for friendship in @user.friendships %>
+    <% @user.friendships.each do |friendship| %>
+
       <li>
         <hr>
         <div class="text-center">
+
           <%- if friendship.friend.profile_photo? -%>
             <%= image_tag(friendship.friend.profile_photo, size: "200x200") %>
           <%- else -%>
             <%= image_tag("defaultavatar.jpg", size: "200x200")%>
           <%- end -%>
 
-              </div>
-        <%=h friendship.friend.username %>
+        </div>
+
+        <%= friendship.friend.username %>
         (<%= link_to "Unfollow", friendship, method: :delete %>)
+
       </li>
+
     <% end %>
   </ul>
 
   <p><%= link_to "Find Friends", users_path %></p>
 
   <h2>Followers</h2>
+
   <ul>
-    <% for user in @user.inverse_friends %>
-      <li><%=h user.username %></li>
+
+    <% @user.inverse_friends do |user| %>
+
+      <li><%= user.username %></li>
       <div class="text-center">
 
         <%- if user.profile_photo? -%>
@@ -38,6 +46,9 @@
         <%- end -%>
 
       </div>
+
     <% end %>
+
   </ul>
+
 </div>
