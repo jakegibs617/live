@@ -2,7 +2,6 @@
 #     ActionView::Template::Error:
 #       undefined method `username' for nil:NilClass
 
-
 # require 'rails_helper'
 #
 # feature 'user creates comment', %{
