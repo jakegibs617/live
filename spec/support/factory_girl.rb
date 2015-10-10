@@ -11,9 +11,11 @@ FactoryGirl.define do
 
   factory :event do
     sequence(:title) { |n| "Bar#{n}" }
-    image_url 'http://i.imgur.com/CWqBQuy.jpg'
+    image_url 'http://i.imgur.com/n08RsOb.jpg'
     description 'badd assss cant wait to go'
     user
+    owner FactoryGirl.create(:user)
+
   end
 
   factory :comment do

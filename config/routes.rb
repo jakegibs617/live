@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   end
 
   resources :friendships, only: [:index, :show, :create, :update, :destroy]
+
+  resources :eventusers, only: [:create, :destroy]
 end

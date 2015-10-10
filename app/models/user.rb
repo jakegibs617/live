@@ -2,6 +2,9 @@ class User < ActiveRecord::Base
   has_many :events
   has_many :comments
 
+  has_many :eventusers
+  has_many :events, through: :eventusers
+
   has_many :friendships
   has_many :friends, through: :friendships
   has_many :inverse_friendships, class_name: "Friendship",
