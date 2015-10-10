@@ -30,6 +30,25 @@ feature 'user follows friend', %{
     expect(page).to have_content("Added Friend")
   end
 
+  scenario 'unsucccessfully trys to follows someone they already follow' do
+    user1 = FactoryGirl.create(:user)
+    user2 = FactoryGirl.create(:user)
+
+    sign_in(user1)
+
+    click_on "Find Friends"
+
+    click_link('Add Friend')
+
+    expect(page).to have_content(user1.username)
+    expect(page).to have_content(user2.username)
+    expect(page).to have_content("Added Friend")
+
+    visit root_path
+    click_on "Find Friends"
+    expect(page).to_not have_content(user2.username)
+  end
+
   scenario 'unfollows friend' do
     user1 = FactoryGirl.create(:user)
     user2 = FactoryGirl.create(:user)

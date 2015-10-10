@@ -1,15 +1,5 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
-  before_action :authorize_user, only: [:edit, :update, :destroy]
-
-  def index
-    @comments = Comment.all
-  end
-
-  def show
-    @comment = Comment.find(params[:id])
-    @user = current_user
-  end
 
   def new
     @event = Event.find(params[:event_id])
@@ -54,13 +44,6 @@ class CommentsController < ApplicationController
   end
 
   protected
-
-  def authorize_user
-    @comment = Comment.find(params[:id])
-    if !(current_user.admin? || @comment.user == current_user)
-      raise ActionController::RoutingError.new("Not Found")
-    end
-  end
 
   def comment_params
     params.require(:comment).permit(:rating, :body, :event_id, :user,

@@ -4,9 +4,6 @@ class EventusersController < ApplicationController
     if @eventuser.save
       flash[:notice] = "You have joined this event."
       redirect_to event_path(params[:event_id])
-    else
-      flash[:error] = "Unable to join."
-      redirect_to event_path(params[:event_id])
     end
   end
 
