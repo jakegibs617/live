@@ -15,10 +15,10 @@
 
 	<h4> people going to <%= @event.title.capitalize %> </h4>
 	<div class="event-description small-6-centered columns">
-	  <li><%= link_to @event.owner.username, user_path(@event.owner) %></li>
+	  <li><%=  @event.owner.username %></li>
 	  <% if @event.users.present? %>
 	    <% @event.users.each do |user| %>
-	    <li> <%= link_to user.username, user_path(user) %> </li>
+	    <li> <%= user.username %> </li>
 	    <% end %>
 	  <% end %>
 	</div>
