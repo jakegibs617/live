@@ -13,8 +13,4 @@ class EventusersController < ApplicationController
     flash[:notice] = "Left event."
     redirect_to events_path
   end
-
-  def eventuser_params
-    params.require(:eventuser).permit(:user_id, :event_id)
-  end
 end
