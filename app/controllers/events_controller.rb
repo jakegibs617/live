@@ -7,6 +7,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @current_joined_user = current_joined_user
     @user = current_user
     @comments = @event.votes_order
   end
@@ -19,6 +20,7 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @user = current_user
     @event.user = @user
+    @event.owner = current_user
 
     if @event.save
       flash[:accepted] = "Event Added!"
@@ -31,7 +33,11 @@ class EventsController < ApplicationController
 
   private
 
+  def current_joined_user
+    Eventuser.where(user_id: current_user, event_id: @event).first
+  end
+
   def event_params
-    params.require(:event).permit(:title, :description, :image_url)
+    params.require(:event).permit(:title, :description, :image_url, :owner_id)
   end
 end
