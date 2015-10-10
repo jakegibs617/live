@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+// require foundation/js/foundation/foundation.orbit
 //= require_tree .
 
 
