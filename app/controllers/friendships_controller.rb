@@ -3,7 +3,7 @@ class FriendshipsController < ApplicationController
     @user = current_user
     @friendship = current_user.friendships.build(friend_id: params[:friend_id])
     if @friendship.save
-      flash[:notice] = "Added friend."
+      flash[:notice] = "Added Friend."
       redirect_to user_path(@user)
     else
       flash[:error] = "Already Your Friend"
@@ -15,7 +15,7 @@ class FriendshipsController < ApplicationController
     @user = current_user
     @friendship = current_user.friendships.find(params[:id])
     @friendship.destroy
-    flash[:notice] = "Removed friendship."
+    flash[:notice] = "Unfolled Friend."
     redirect_to user_path(@user)
   end
 end

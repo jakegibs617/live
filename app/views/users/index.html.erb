@@ -10,9 +10,7 @@
       <hr>
 <% end %>
 
-
   <ul class="member-list ">
-
 
     <div class="small-4-centered columns event-description text-center">
     <h4>Members:</h4>
@@ -30,7 +28,7 @@
         				</div>
           <strong><%=h user.username %> </strong>
 
-          | <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
+          | <%= link_to "Add Friend", friendships_path(friend_id: user), method: :post %>
             <% if current_user.admin? %>
 
               | <%= link_to "Delete This User", user_path(user), method: :delete %>

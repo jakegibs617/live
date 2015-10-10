@@ -1,11 +1,10 @@
 <div class="event-description text-center">
 
-  <h4>my profile</h4>
+  <h4>My Profile</h4>
 
   <p>Me: <%=h @user.username %></p>
 
-
-  <h2>Friends</h2>
+  <h2>People You Follow</h2>
   <ul>
     <% for friendship in @user.friendships %>
       <li>
@@ -19,14 +18,14 @@
 
               </div>
         <%=h friendship.friend.username %>
-        (<%= link_to "Unfriend", friendship, :method => :delete %>)
+        (<%= link_to "Unfollow", friendship, method: :delete %>)
       </li>
     <% end %>
   </ul>
 
   <p><%= link_to "Find Friends", users_path %></p>
 
-  <h2>Friended by Users</h2>
+  <h2>Followers</h2>
   <ul>
     <% for user in @user.inverse_friends %>
       <li><%=h user.username %></li>
@@ -38,7 +37,7 @@
           <%= image_tag("defaultavatar.jpg", size: "200x200")%>
         <%- end -%>
 
-            </div>
+      </div>
     <% end %>
   </ul>
 </div>
