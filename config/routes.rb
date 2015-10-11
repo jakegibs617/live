@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, only: [:index, :show, :update, :destroy]
 
-  resources :events, only: [:index, :show, :new, :create, :update, :edit] do
+  resources :events do
     resources :comments, except: [:show]
   end
 

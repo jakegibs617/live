@@ -7,7 +7,7 @@
 
   <div class="row">
     <div class="small-6 small-centered columns">
-      <div class="service">
+      <div class="service hide-for-small">
         <div class="service-icon-box">
           <%= image_tag "live.jpg", class: "service-icon" %>
         </div>
@@ -52,6 +52,7 @@
 
 </div>
 <% if current_user %>
+
   <%= render partial: 'index' %>
   <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
   <div class="social show-for-small-only">
