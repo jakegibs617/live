@@ -20,5 +20,4 @@ class Event < ActiveRecord::Base
     where('title ILIKE ?', "%#{search}%") |
       where('description ILIKE ?', "%#{search}%")
   end
-
 end

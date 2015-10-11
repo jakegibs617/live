@@ -263,12 +263,12 @@ a {
 }
 
 .search-button {
-  margin-top: -28px;
+  background: rgba(0, 0, 0, 0.6);
   display: inline-block;
+  margin-top: -28px;
   position: relative;
-  background: rgba( 0, 0, 0, 0.6)
 }
 
 .search-button:hover {
-  background: rgba( 0, 0, 0, 0.2)
+  background: rgba(0, 0, 0, 0.2);
 }
