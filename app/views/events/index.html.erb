@@ -21,13 +21,15 @@
     </div>
   </div>
         <h3 class="text-center show-for-small-only back-ground-text">
-            <%= link_to 'Enter', new_event_path %></h3>
-<br>
-<br>
-<br>
+            <%= link_to 'Enter', new_event_path %>
+        </h3>
+
 <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
 
 <div class="social show-for-small-only">
+  <br>
+  <br>
+  <br>
   <li ><a href="https://www.facebook.com/"
       class="facebook round button "> <span></span>Facebook</a></li>
   <li ><a href="https://twitter.com/"
@@ -43,17 +45,14 @@
   <a href="https://plus.google.com/"
      class="google round button "> <span></span>Google+</a>
 </div>
-<br>
-<br>
-<br>
-<br>
+
 
 <% end %>
 
 </div>
 <% if current_user %>
-
   <%= render partial: 'index' %>
+  <br>
   <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
   <div class="social show-for-small-only">
     <li ><a href="https://www.facebook.com/"
