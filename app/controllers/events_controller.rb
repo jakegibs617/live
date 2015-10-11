@@ -67,7 +67,6 @@ class EventsController < ApplicationController
     end
   end
 
-
   def current_joined_user
     Eventuser.where(user_id: current_user, event_id: @event).first
   end
