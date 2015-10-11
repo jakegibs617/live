@@ -57,6 +57,14 @@ h4 {
   padding: 10px;
 }
 
+ul {
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+}
+
 .profile-photo {
   margin-right: 5px;
   width: 50px;
@@ -65,73 +73,8 @@ h4 {
 $facebook-color: #3b5998;
 $twitter-color: #55acee;
 $google-color: #d50f25;
-$text-transform: uppercase;
 $icon-size: 0.75rem;
 
-.split.button {
-  width: 10%;
-
-  &.facebook {
-    background: $facebook-color;
-    // text-transform: $text-transform;
-
-    span {
-      background: darken($facebook-color, 10%);
-
-      &:after {
-        border: none;
-        font-family: "foundation-icons";
-        content: "\f1c4";
-        font-size: $icon-size;
-        line-height: 0.25rem;
-        margin-left: -0.7rem;
-      }
-    }
-  }
-
-  &.twitter {
-    background: $twitter-color;
-    // text-transform: $text-transform;
-
-    span {
-      background: darken($twitter-color, 10%);
-
-      &:after {
-        border: none;
-        font-family: "foundation-icons";
-        content: "\f1e4";
-        font-size: $icon-size;
-        line-height: 0.25rem;
-        margin-left: -0.7rem;
-      }
-    }
-  }
-
-  &.google {
-    background: $google-color;
-    // text-transform: $text-transform;
-
-    span {
-      background: darken($google-color, 10%);
-
-      &:after {
-        border: none;
-        font-family: "foundation-icons";
-        content: "\f1ca";
-        font-size: $icon-size;
-        line-height: 0.25rem;
-        margin-left: -0.7rem;
-      }
-    }
-  }
-
-  &.left-icon {
-    text-align: right;
-    span {
-      left: 0;
-    }
-  }
-}
 .service {
   width: 100%;
   height: 320px;
@@ -244,10 +187,6 @@ a {
   padding: 10px;
 }
 
-.no-bullets {
-  list-style-type: none;
-}
-
 .error-explanation {
   background: $white;
   color: $grey;
@@ -271,4 +210,47 @@ a {
 
 .search-button:hover {
   background: rgba(0, 0, 0, 0.2);
+}
+
+.join-users {
+  background-color: $grey;
+  color: $white;
+  padding: 20px;
+  text-align: center;
+}
+
+.facebook {
+  background-color: $facebook-color;
+  content: "\f1c4";
+  font-family: "foundation-icons";
+  font-size: $icon-size;
+  line-height: 0.1rem;
+}
+
+.facebook:hover {
+  background-color: darken($facebook-color, 10%);
+}
+
+.twitter {
+  background-color: $twitter-color;
+  content: "\f1e4";
+  font-family: "foundation-icons";
+  font-size: $icon-size;
+  line-height: 0.1rem;
+}
+
+.twitter:hover {
+  background-color: darken($twitter-color, 10%);
+}
+
+.google {
+  background-color: $google-color;
+  content: "\f1ca";
+  font-family: "foundation-icons";
+  font-size: $icon-size;
+  line-height: 0.1rem;
+}
+
+.google:hover {
+  background-color: darken($google-color, 10%);
 }

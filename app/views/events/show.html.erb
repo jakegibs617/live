@@ -4,18 +4,20 @@
 	<h4 class="text-center">  <%= image_tag(@event.image_url,
 				title: @event.title, size: "1000x1000") %>
 				</h4>
-
-	<% if @event.owner != current_user %>
-	  <% if @event.users.include?(current_user) %>
-	    <%= link_to "Leave Event", eventuser_path(id: @current_joined_user),
-			    method: :delete %>
-	  <% else %>
-	    <%= link_to "Join Event", eventusers_path(event_id: @event.id),
-			    method: :post %>
-	  <% end %>
-	<% end %>
-
-	<h4> people going to <%= @event.title.capitalize %> </h4>
+<hr>
+	<div class="join-users">
+		<% if @event.owner != current_user %>
+		  <% if @event.users.include?(current_user) %>
+		    <%= link_to "Leave Event", eventuser_path(id: @current_joined_user),
+				    method: :delete %>
+		  <% else %>
+		    <%= link_to "Join Event", eventusers_path(event_id: @event.id),
+				    method: :post %>
+		  <% end %>
+		<% end %>
+	</div>
+<hr>
+	<h4> people going to <%= @event.title %> </h4>
 	<div class="event-description small-6-centered columns">
 	  <li><%=  @event.owner.username %></li>
 	  <% if @event.users.present? %>
