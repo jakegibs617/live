@@ -214,15 +214,15 @@ a {
 
 .join-users {
   background-color: $grey;
-  text-align: center;
-  padding: 20px;
   color: $white;
+  padding: 20px;
+  text-align: center;
 }
 
 .facebook {
   background-color: $facebook-color;
-  font-family: "foundation-icons";
   content: "\f1c4";
+  font-family: "foundation-icons";
   font-size: $icon-size;
   line-height: 0.1rem;
 }
@@ -233,8 +233,8 @@ a {
 
 .twitter {
   background-color: $twitter-color;
-  font-family: "foundation-icons";
   content: "\f1e4";
+  font-family: "foundation-icons";
   font-size: $icon-size;
   line-height: 0.1rem;
 }
@@ -245,8 +245,8 @@ a {
 
 .google {
   background-color: $google-color;
-  font-family: "foundation-icons";
   content: "\f1ca";
+  font-family: "foundation-icons";
   font-size: $icon-size;
   line-height: 0.1rem;
 }
