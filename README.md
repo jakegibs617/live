@@ -1,37 +1,31 @@
 ![Build Status](https://codeship.com/projects/138c4fc0-4db0-0133-480e-524cf6105349/status?branch=master)![Code Climate](https://codeclimate.com/github/jakegibs617/live.png) ![Coverage Status](https://coveralls.io/repos/jakegibs617/live/badge.png)
 
-## Live Events
+## Description
+A rails app set to assist the nights a person wants to go out with friends
+but doesn't know where people are going. Great app to hang out with people you
+know and don't know.
 
-* Ruby version
+[Click Here To View Heroku Application](https://live-events.herokuapp.com/)
 
-* System dependencies
+[Trello Storyboard](https://trello.com/b/oZAUPcCn/live-app)
 
-* Configuration
-      AWS_ACCESS_KEY=""
-      SECRET_AWS_ACCESS_KEY=""
-      AWS_S3_BUCKET=""
+## Challenges faced
+* Building a Friend to Friend user experience
+* CRUD Actions where logical for users, events, comments
+* Profile photo through AWS
 
-* Database creation
-      $rake db:create
-      $rake db:migrate
+## Setting up locally
+* First clone down the repo, load the schema
 
-* Database initialization
+ $ bundle
+ $ rake db:create
+ $ rake db:migrate
+ $ rails s
 
-* How to run the test suite
-      $rake spec
+* visit [your application](http://localhost:3000)
 
-* Services (job queues, cache servers, search engines, etc.)
+## User Stories
+[user stories](https://docs.google.com/document/d/1iNel0_NQ5RvcUj8T4u3-QJ7Zgijd-ibiCckgvLcwbUo/edit?usp=sharing)
 
-* Deployment instructions
-     $rails s
-* ...
-
-trello task list:
-https://trello.com/b/oZAUPcCn/live-app
-
-https://live-events.herokuapp.com/
-
-user stories:
-https://docs.google.com/document/d/1iNel0_NQ5RvcUj8T4u3-QJ7Zgijd-ibiCckgvLcwbUo/edit?usp=sharing
-
-er diagram: coming soon
+## ER Diagram
+[ER Diagram](http://i.imgur.com/hIzXY37.png)
