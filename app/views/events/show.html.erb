@@ -7,9 +7,11 @@
 
 	<% if @event.owner != current_user %>
 	  <% if @event.users.include?(current_user) %>
-	    <%= link_to "Leave Event", eventuser_path(id: @current_joined_user), method: :delete %>
+	    <%= link_to "Leave Event", eventuser_path(id: @current_joined_user),
+			    method: :delete %>
 	  <% else %>
-	    <%= link_to "Join Event", eventusers_path(event_id: @event.id), method: :post %>
+	    <%= link_to "Join Event", eventusers_path(event_id: @event.id),
+			    method: :post %>
 	  <% end %>
 	<% end %>
 
@@ -23,9 +25,11 @@
 	  <% end %>
 	</div>
 
-	<div class="event-description small-6-centered columns"><%= @event.description %>
+	<div class="event-description small-6-centered columns">
+		         <%= @event.description %>
 		<hr>
-		<p><%= link_to "Add Comment", new_event_comment_path(@event), class: "add-comment" %></p>
+		<p><%= link_to "Add Comment", new_event_comment_path(@event),
+		       class: "add-comment" %></p>
     <% if @comments.present? %>
       <% @comments.each do |comment| %>
         <ul>

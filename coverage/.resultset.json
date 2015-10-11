@@ -49,6 +49,10 @@
         null,
         1,
         1,
+        null,
+        1,
+        2,
+        null,
         null
       ],
       "/Users/jacobkgiberson/Desktop/breakabletoy/live/app/models/event.rb": [
@@ -69,6 +73,12 @@
         1,
         21,
         null,
+        null,
+        1,
+        null,
+        2,
+        null,
+        null,
         null
       ],
       "/Users/jacobkgiberson/Desktop/breakabletoy/live/app/controllers/application_controller.rb": [
@@ -81,10 +91,10 @@
         1,
         null,
         1,
-        56,
-        56,
-        56,
-        56,
+        60,
+        60,
+        60,
+        60,
         null,
         null
       ],
@@ -93,7 +103,7 @@
         1,
         null,
         1,
-        37,
+        39,
         null,
         null,
         1,
@@ -270,8 +280,16 @@
         1,
         null,
         null
+      ],
+      "/Users/jacobkgiberson/Desktop/breakabletoy/live/app/controllers/searches_controller.rb": [
+        1,
+        1,
+        2,
+        2,
+        null,
+        null
       ]
     },
-    "timestamp": 1444517826
+    "timestamp": 1444525825
   }
 }

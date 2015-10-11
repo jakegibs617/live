@@ -17,15 +17,20 @@
     </ul>
 
     <section class="top-bar-section">
-      <ul class="right">
+        <div class="row collapse columns small-6">
+          <%= render "layouts/search" %>
+        </div>
 
+
+      <ul class="right">
 
           <li><%= link_to 'Create Event', new_event_path %></li>
 
           <%- if current_user -%>
             <li><%= link_to 'Find Friends', users_path %></li>
 
-            <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+            <li><%= link_to 'Sign Out', destroy_user_session_path,
+                    method: :delete %></li>
             <li class="has-dropdown">
               <a href="#">My Account</a>
               <ul class="dropdown">
@@ -35,9 +40,12 @@
             </li>
 
             <%- if current_user.profile_photo? -%>
-              <li class="profile-photo"><%= link_to image_tag(current_user.profile_photo), edit_user_registration_path %></li>
+              <li class="profile-photo hide-for-small"><%= link_to image_tag(current_user.profile_photo),
+                edit_user_registration_path %>
+              </li>
             <%- else -%>
-              <li class="profile-photo"><%= link_to image_tag("defaultavatar.jpg"), edit_user_registration_path %></li>
+              <li class="profile-photo hide-for-small"><%= link_to image_tag("defaultavatar.jpg"), edit_user_registration_path %>
+              </li>
             <%- end -%>
 
           <%- else -%>
