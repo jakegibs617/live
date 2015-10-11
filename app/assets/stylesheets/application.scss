@@ -21,9 +21,14 @@ $hover: #FFFF99;
 $grey: #333333;
 $foot: #888888;
 $light-grey: #555555;
-$search-result: #222222;
+$search-result: #000fff;
+$jet: #222222;
+$black: #000000;
+$stone: #999999;
 
 .container {
+  color: $stone;
+
   .text-field {
     padding: 5px;
     height: 25px;
@@ -37,6 +42,7 @@ $search-result: #222222;
     padding-bottom: 15px;
   }
 }
+
 
 .submit-form button {
   font: bold 12px/24px Helvetica, Sans-Serif;
@@ -121,10 +127,11 @@ $icon-size: 0.75rem;
     transform: scale(1); }
 
 body {
-  background-color: $grey;
+  background-color: $jet;
   background-image: image-url("background.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center top;
+  background-size: 100% ;
 }
 
 h3 a {
@@ -153,15 +160,10 @@ a {
 }
 
 .footer {
-  background: $grey;
-  margin: 20px;
+  background: $jet;
   padding: 20px;
-  font-size: 1em;
-  color: $foot;
-  font: Helvetica, Sans-Serif;
-  position: fixed;
-  left: -20px;
-  bottom: -20px;
+  font-size: 0.75em;
+  color: $stone;
   width: 100%;
 }
 
@@ -202,14 +204,13 @@ a {
 }
 
 .search-button {
-  background: rgba(0, 0, 0, 0.6);
-  display: inline-block;
-  margin-top: -28px;
-  position: relative;
+  background: $jet;
+  margin-top: -1.7rem;
 }
 
 .search-button:hover {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0);
+  color: $jet;
 }
 
 .join-users {
