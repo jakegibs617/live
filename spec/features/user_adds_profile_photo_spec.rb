@@ -3,7 +3,7 @@ require "rails_helper"
 feature 'user adds profile pic', %{
   As a user
   I want to be able to a a profile pic
-  So that others can recognize me 
+  So that others can recognize me
 } do
 
   scenario "adds profile pic succcessfully" do
