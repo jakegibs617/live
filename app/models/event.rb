@@ -15,4 +15,9 @@ class Event < ActiveRecord::Base
   def votes_order
     comments.sort_by { |comment| comment.body }
   end
+
+  def self.search(search)
+    where('title ILIKE ?', "%#{search}%") |
+      where('description ILIKE ?', "%#{search}%")
+  end
 end

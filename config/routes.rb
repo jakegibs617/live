@@ -10,4 +10,7 @@ Rails.application.routes.draw do
   resources :friendships, only: [:index, :show, :create, :update, :destroy]
 
   resources :eventusers, only: [:create, :destroy]
+
+  resources :searches, only: [:index]
+
 end

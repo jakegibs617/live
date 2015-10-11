@@ -1,0 +1,36 @@
+<div class="text-center category-header">
+  <h4> Search Results </h4>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="field columns small-3">
+      <ul>
+        <% if params[:search].empty? || @search_results_event.empty? && @search_results_comment.empty?%>
+          <p>No Results</p>
+        <% else %>
+          <li>Showing Results for <div class="blue-text">
+              <%= params[:search]%></div></li>
+          <% if @search_results_event.present? %>
+            <p>Event Results</p>
+            <% @search_results_event.each do |result| %>
+              <li><%= link_to result.title, event_path(result) %></li>
+            <% end %>
+          <% end %>
+          <% if @search_results_comment.present? &&
+                @search_results_event.present? %>
+            <HR WIDTH="90%">
+          <% end %>
+          <% if @search_results_comment.present? %>
+            <p>Comment Results</p>
+            <% @search_results_comment.each do |result| %>
+                <li>
+                  <%= link_to result.event.title, event_path(result.event) %>
+                </li>
+            <% end %>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <br>
+</div>
