@@ -3,7 +3,13 @@
 	<h4><%= @event.title %></h4>
 	<h4 class="text-center">  <%= image_tag(@event.image_url,
 				title: @event.title, size: "1000x1000") %>
-				</h4>
+	</h4>
+	<% if current_user %>
+	  <% if current_user.admin? || (@event.user == current_user) %>
+	    <li class="text-center"><%= link_to "Edit Event", edit_event_path(@event) %> |
+	        <%= link_to "Delete Event", event_path(@event), method: :delete %></li>
+	  <% end %>
+	<% end %>
 <hr>
 	<div class="join-users">
 		<% if @event.owner != current_user %>
