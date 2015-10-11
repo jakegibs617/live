@@ -5,6 +5,7 @@ feature 'user creates comment', %{
   I want to create new comment
   So that other users can see what I think of the event
 } do
+
   scenario 'creates comment succcessfully' do
     user1 = FactoryGirl.create(:user)
     user2 = FactoryGirl.create(:user)
