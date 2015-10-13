@@ -2,42 +2,42 @@
 <div class="container">
   <%= form_for @event do |f| %>
     <div class="row">
-      <div class="field columns small-3-centered">
+      <div class="field columns small-centered">
         <%= f.label :title %>
         <%= f.text_field :title, class: "text-field" %>
       </div>
     </div>
     <br>
     <div class="row">
-      <div class="field columns small-6-centered">
+      <div class="field columns small-centered">
         <%= f.label :description %>
         <%= f.text_area :description, class: "text-field" %>
       </div>
     </div>
     <br>
     <div class="row">
-      <div class="field columns small-6-centered">
+      <div class="field columns small-centered">
         <%= f.label :image_url, "Image Url" %>
         <%= f.text_field :image_url, class: "text-field" %>
       </div>
     </div>
     <br>
     <div class="row">
-      <div class="field columns small-6-centered">
+      <div class="field columns small-centered">
         <%= f.label :address %>
         <%= f.text_field :address, class: "text-field" %>
       </div>
     </div>
     <br>
     <div class="row">
-      <div class="field columns small-6-centered">
+      <div class="field columns small-centered">
         <%= f.label :city %>
         <%= f.text_field :city, class: "text-field" %>
       </div>
     </div>
     <br>
     <div class="row">
-      <div class="field columns small-6-centered">
+      <div class="field columns small-centered">
         <%= f.label :state %>
         <%= f.text_field :state, class: "text-field" %>
       </div>
