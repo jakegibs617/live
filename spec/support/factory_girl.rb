@@ -13,6 +13,9 @@ FactoryGirl.define do
     sequence(:title) { |n| "Bar#{n}" }
     image_url 'http://i.imgur.com/n08RsOb.jpg'
     description 'badd assss cant wait to go'
+    address '23 C st'
+    city 'Boston'
+    state 'MA'
     user
     owner FactoryGirl.create(:user)
 

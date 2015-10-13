@@ -12,5 +12,7 @@ Rails.application.routes.draw do
   resources :eventusers, only: [:create, :destroy]
 
   resources :searches, only: [:index]
+  resources :locations
+
 
 end

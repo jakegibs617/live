@@ -13,14 +13,12 @@
         <h1><a href="/">Live</a></h1>
       </li>
       <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-
     </ul>
 
     <section class="top-bar-section">
         <div class="row collapse columns small-6">
           <%= render "layouts/search" %>
         </div>
-
 
       <ul class="right">
 
@@ -40,11 +38,11 @@
             </li>
 
             <%- if current_user.profile_photo? -%>
-              <li class="profile-photo hide-for-small"><%= link_to image_tag(current_user.profile_photo),
+              <li class="profile-photo hide-for-small"><%= link_to image_tag(current_user.profile_photo, class: "photo"),
                 edit_user_registration_path %>
               </li>
             <%- else -%>
-              <li class="profile-photo hide-for-small"><%= link_to image_tag("defaultavatar.jpg"), edit_user_registration_path %>
+              <li class="profile-photo hide-for-small"><%= link_to image_tag("defaultavatar.jpg", class: "photo"), edit_user_registration_path %>
               </li>
             <%- end -%>
 
@@ -66,6 +64,8 @@
 
   <%= javascript_include_tag 'application' %>
   <%= yield :extra_footer %>
+
+
 </body>
 <br>
 <footer>

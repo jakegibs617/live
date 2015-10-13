@@ -3,6 +3,9 @@ class Event < ActiveRecord::Base
   validates :title, presence: true
   validates :image_url, presence: true
   validates :user, presence: true
+  validates :address, presence: true
+  validates :city, presence: true
+  validates :state, presence: true
 
   belongs_to :user
   has_many :comments
