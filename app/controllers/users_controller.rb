@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def index
     @admins = User.where(role: "admin")
     @members = User.where(role: "member")
-    @users = User.all
+    @users = User.nonfriends(current_user)
   end
 
   def update

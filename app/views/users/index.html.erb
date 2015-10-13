@@ -26,7 +26,6 @@
       <div class="user">
         <hr>
         <% @users.each do |user| %>
-          <% if user != current_user %>
 
               <div class="text-center">
                 <%- if user.profile_photo? -%>
@@ -44,7 +43,6 @@
                 | <%= link_to "Make Admin", user_path(user), method: :put %>
               <% end %>
 
-          <% end %>
         <% end %>
       </div>
     </div>

@@ -16,6 +16,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   mount_uploader :profile_photo, ProfilePhotoUploader
 
+  scope :nonfriends, -> (user) { where.not(id: user.friends.ids << user.id) }
+
   def admin?
    role == "admin"
   end
