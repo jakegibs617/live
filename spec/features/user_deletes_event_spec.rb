@@ -19,7 +19,7 @@ feature 'user deletes event', %{
     fill_in "Address", with: event.address
     fill_in "City", with: event.city
     fill_in "State", with: event.state
-    
+
     click_on "Submit"
 
     expect(page).to have_content("Event Added!")
