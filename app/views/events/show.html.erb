@@ -70,9 +70,9 @@
 	              <li><%= comment.body.capitalize %></li>
 
 								<%- if comment.image_url? -%>
-									<li class="hide-for-small"><%= image_tag(comment.image_url, class: "comment-photo") %>
+									<li class="hide-for-small"><%= image_tag(comment.image_url, class: "comment-photo hide-for-small") %>
 									</li>
-									<li class="hide-for-large hide-for-medium"><%= image_tag(comment.image_url, class: "small-image") %>
+									<li class="hide-for-large hide-for-medium"><%= image_tag(comment.image_url, class: "small-image hide-for-large hide-for-medium") %>
 									</li>
 								<%- end -%>
 
