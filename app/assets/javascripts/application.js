@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require foundation
 // require foundation/js/foundation/foundation.orbit
+// require underscore
+// require gmaps/google
 //= require_tree .
 
 

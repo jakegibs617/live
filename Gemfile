@@ -14,6 +14,8 @@ gem 'as-duration'
 gem 'kaminari'
 gem 'carrierwave'
 gem 'fog'
+gem 'gmaps4rails'
+
 
 group :test do
   gem 'coveralls', require: false

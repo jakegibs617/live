@@ -1,3 +1,14 @@
+<div align="center" class="gmap">
+	<iframe
+	 width="75%"
+	 height="250"
+	 frameborder="0" style="border:0"
+	 src="https://www.google.com/maps/embed/v1/place?key=<%= ENV['GOOGLE_KEY'] %>
+		&q=<%= @event.address %>,<%= @event.city %>,<%= @event.state %>
+		&attribution_source=Google+Maps+Embed+API
+		&attribution_ios_deep_link_id=comgooglemaps://?daddr=<%= @event.address %>, <%= @event.city %>, <%= @event.state %>">
+	</iframe>
+</div>
 
 <div class="row">
 	<h4><%= @event.title %></h4>

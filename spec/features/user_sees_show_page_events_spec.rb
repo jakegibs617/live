@@ -17,6 +17,9 @@ feature 'user visits home page', %{
     fill_in "Title", with: event.title
     fill_in "Description", with: event.description
     fill_in "Image Url", with: event.image_url
+    fill_in "Address", with: event.address
+    fill_in "City", with: event.city
+    fill_in "State", with: event.state
 
     click_on "Submit"
 
