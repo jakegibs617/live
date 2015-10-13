@@ -277,16 +277,6 @@ a {
   margin-left: 1rem;
 }
 
-.comment-photo {
-  height: 50%;
-  width: 50%;
-}
-
-.small-image {
-  height: 100%;
-  width: 100%;
-}
-
 .rating {
   color: $third;
 }
@@ -303,5 +293,27 @@ a {
   .gmap {
     margin-left: 15%;
     margin-top: 0.75rem;
+  }
+}
+
+//mobile
+@media only screen and (max-width: 767px) {
+  .comment-photo {
+    height: 50%;
+    width: 50%;
+  }
+  .small-image {
+    display: none;
+  }
+}
+
+//desktop
+@media only screen and (min-width: 768px) {
+  .small-image {
+    height: 100%;
+    width: 100%;
+  }
+  .comment-photo {
+    display: none;
   }
 }
