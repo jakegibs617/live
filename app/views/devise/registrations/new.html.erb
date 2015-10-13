@@ -5,7 +5,7 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
 <div class="row">
-  <div class="columns small-4-centered">
+  <div class="columns small-centered">
     <div class="field">
       <%= f.label :email %>
       <%= f.email_field :email, autofocus: true, class: "text-field" %>
@@ -19,7 +19,7 @@
 </div>
 
   <div class="row">
-    <div class="columns small-4-centered">
+    <div class="columns small-centered">
       <div class="field">
         <%= f.label :username %><br>
         <%= f.text_field :username, value: Faker::Internet.user_name.capitalize + Faker::Number.number(5) %>
@@ -28,7 +28,7 @@
   </div>
 
   <div class="row">
-    <div class="columns small-4-centered">
+    <div class="columns small-centered">
       <div class="field">
         <%= f.label :profile_photo, "Profile Photo" %><br>
         <%= f.file_field :profile_photo %>
@@ -37,7 +37,7 @@
   </div>
 
   <div class="row">
-    <div class="columns small-4-centered">
+    <div class="columns small-centered">
       <div class="field">
         <%= f.label :password %>
         <% if @minimum_password_length %>
@@ -54,7 +54,7 @@
   </div>
 
   <div class="row">
-    <div class="columns small-4-centered">
+    <div class="columns small-centered">
       <div class="field">
         <%= f.label :password_confirmation %>
         <%= f.password_field :password_confirmation, autocomplete: "off", class: "text-field" %>

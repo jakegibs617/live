@@ -1,6 +1,6 @@
-<div align="center" class="gmap">
+<div class="gmap columns small-12 medium-9 medium-centered">
 	<iframe
-	 width="75%"
+	 width="100%"
 	 height="250"
 	 frameborder="0" style="border:0"
 	 src="https://www.google.com/maps/embed/v1/place?key=<%= ENV['GOOGLE_KEY'] %>
@@ -35,7 +35,7 @@
 	</div>
 <hr>
 	<h4> people going to <%= @event.title %> </h4>
-	<div class="event-description small-6-centered columns">
+	<div class="event-description small-centered columns">
 	  <li><%=  @event.owner.username %></li>
 	  <% if @event.users.present? %>
 	    <% @event.users.each do |user| %>
@@ -44,7 +44,7 @@
 	  <% end %>
 	</div>
 
-	<div class="event-description small-6-centered columns">
+	<div class="event-description small-centered columns">
 		         <%= @event.description %>
 		<hr>
 		<p><%= link_to "Add Comment", new_event_comment_path(@event),
@@ -53,20 +53,39 @@
       <% @comments.each do |comment| %>
         <ul>
           <div class="row">
-            <div class="columns small-6-centered">
-              <li><%= comment.body.capitalize %></li>
-              <li>Rating: <%= comment.rating %></li>
-							<h4 class="text-center">  <%= image_tag(comment.image_url,
-										title: @event.title, size: "1000x1000") %>
-										</h4>
-                <% if current_user.admin? || (@user == comment.user) %>
+            <div class="columns small-centered">
+
+							<%- if comment.user.profile_photo? -%>
+	              <li class="profile-photo hide-for-small"><%= image_tag(comment.user.profile_photo, class: "photo") %>
+	              </li>
+	            <%- else -%>
+	              <li class="profile-photo hide-for-small"><%= image_tag("defaultavatar.jpg", class: "photo") %>
+	              </li>
+	            <%- end -%>
+
+              <li class="username"><%= comment.user.username %></li>
+
+							<div class="user-comment">
+	              <li class="rating">Rating: <%= comment.rating %></li>
+	              <li><%= comment.body.capitalize %></li>
+
+								<%- if comment.image_url? -%>
+									<li class="hide-for-small"><%= image_tag(comment.image_url, class: "comment-photo") %>
+									</li>
+									<li class="hide-for-large hide-for-medium"><%= image_tag(comment.image_url, class: "small-image") %>
+									</li>
+								<%- end -%>
+
+								<% if current_user.admin? || (@user == comment.user) %>
 		              <li><%= link_to "Edit",
 									        edit_event_comment_path(@event, comment) %> |
 		                  <%= link_to "Delete",
 											    event_comment_path(@event, comment),
 													method: :delete %>
-								 </li>
-                <% end %>
+								  </li>
+	              <% end %>
+							</div>
+
 								<hr>
             </div>
           </div>

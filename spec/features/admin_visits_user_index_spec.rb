@@ -41,7 +41,7 @@ feature 'admin visits users index', %{
     expect(page).to have_content(user1.username)
     first('.user').click_link('Make Admin')
 
-    within (".admin-list-centered") do
+    within (".admin-list") do
       expect(page).to have_content("billy6")
       expect(page).to have_content("billy7")
     end

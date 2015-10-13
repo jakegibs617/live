@@ -46,9 +46,7 @@ feature 'user follows friend', %{
 
     visit root_path
     click_on "Find Friends"
-    expect(page).to have_content(user2.username)
-    click_link('Add Friend')
-    expect(page).to have_content("Already Your Friend")
+    expect(page).to_not have_content(user2.username)
   end
 
   scenario 'unfollows friend' do
