@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_merit
+
   has_many :events
   has_many :comments
 

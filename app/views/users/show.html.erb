@@ -2,9 +2,18 @@
   <h4>My Profile</h4>
 <div class="event-description text-center">
 
+<div class="user-profile container">
 
-  <p>Me: <%= @user.username %></p>
-
+  <div class="text-left">
+    <%- if @user.profile_photo? -%>
+      <%= image_tag(@user.profile_photo, size: "200x200", class: "photo") %>
+    <%- else -%>
+      <%= image_tag("defaultavatar.jpg", size: "200x200", class: "photo")%>
+    <%- end -%>
+  </div>
+  <p class="text-left username-header"><%= @user.username %></p>
+</div>
+<br>
   <h2>People You Follow</h2>
   <ul>
     <% @user.friendships.each do |friendship| %>

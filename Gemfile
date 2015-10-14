@@ -14,7 +14,7 @@ gem 'as-duration'
 gem 'kaminari'
 gem 'carrierwave'
 gem 'fog'
-gem 'gmaps4rails'
+gem 'merit'
 
 
 group :test do
