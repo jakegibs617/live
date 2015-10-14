@@ -3,7 +3,7 @@ Merit.setup do |config|
 end
 
 badges = [
-  {id: 1,
+  { id: 1,
    name: "party starter badge",
    custom_fields: { image: "/event_1.png" } },
   { id: 2, name: 'Novice Commenter',

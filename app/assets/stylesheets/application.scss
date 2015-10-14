@@ -314,18 +314,18 @@ a {
 }
 
 .user-profile {
-  height: 100%;
-  width: 100%;
   background-color: $third;
-  padding-top: 2.5%;
   border-color: $jet;
   border-style: solid;
   border-width: medium;
+  height: 100%;
+  padding-top: 2.5%;
+  width: 100%;
 }
 
-.username-header{
-  font-weight: bold;
+.username-header {
   color: $jet;
   font-size: 1rem;
+  font-weight: bold;
   padding-top: 2%;
 }
