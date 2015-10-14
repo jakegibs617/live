@@ -2,9 +2,31 @@
   <h4>My Profile</h4>
 <div class="event-description text-center">
 
+<div class="user-profile container">
 
-  <p>Me: <%= @user.username %></p>
+  <div class="row">
+    <div class="columns small-2">
+      <%- if @user.profile_photo? -%>
+        <%= image_tag(@user.profile_photo, size: "200x200", class: "photo") %>
+      <%- else -%>
+        <%= image_tag("defaultavatar.jpg", size: "200x200", class: "photo")%>
+      <%- end -%>
+      <p class="text-left username-header"><%= @user.username %></p>
+    </div>
 
+    <% current_user.badges.each do |badge| %>
+      <div class="columns small-1 text-center">
+          <%= image_tag(badge.custom_fields[:image], size: "50x50") %>
+          <br>
+          <%= badge.name %>
+      </div>
+    <% end %>
+
+  </div>
+</div>
+
+
+<br>
   <h2>People You Follow</h2>
   <ul>
     <% @user.friendships.each do |friendship| %>

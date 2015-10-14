@@ -38,6 +38,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.3.8)
+    ambry (0.3.1)
     arel (6.0.3)
     as-duration (0.1.0)
     bcrypt (3.1.10)
@@ -195,7 +196,6 @@ GEM
       sass (>= 3.3.0, < 3.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
-    gmaps4rails (2.1.2)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     i18n (0.7.0)
@@ -215,6 +215,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    merit (2.3.2)
+      ambry (~> 0.3.0)
     method_source (0.8.2)
     mime-types (2.6.2)
     mini_portile (0.6.2)
@@ -369,10 +371,10 @@ DEPENDENCIES
   faker
   fog
   foundation-rails
-  gmaps4rails
   jquery-rails
   kaminari
   launchy
+  merit
   pg
   poltergeist
   pry-rails

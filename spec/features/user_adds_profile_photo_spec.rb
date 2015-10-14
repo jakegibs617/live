@@ -10,7 +10,7 @@ feature 'user adds profile pic', %{
     user = FactoryGirl.create(:user)
     sign_in(user)
     visit root_path
-    click_on "Profile"
+    click_on "Edit Profile"
 
     attach_file "Profile Photo",
       "#{Rails.root}/spec/support/images/example_photo.jpg"

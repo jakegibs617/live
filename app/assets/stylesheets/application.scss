@@ -140,10 +140,11 @@ $icon-size: 0.75rem;
 @media only screen and (min-width: 768px) {
   body {
     background-color: $jet;
-    background-image: image-url("background.jpg");
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: 100%;
+    background: image-url("background.jpg") no-repeat center center fixed;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
   }
 }
 
@@ -310,4 +311,21 @@ a {
     height: 80%;
     width: 80%;
   }
+}
+
+.user-profile {
+  background-color: $third;
+  border-color: $jet;
+  border-style: solid;
+  border-width: medium;
+  height: 100%;
+  padding-top: 2.5%;
+  width: 100%;
+}
+
+.username-header {
+  color: $jet;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-top: 2%;
 }

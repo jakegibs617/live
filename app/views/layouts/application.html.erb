@@ -32,17 +32,17 @@
             <li class="has-dropdown">
               <a href="#">My Account</a>
               <ul class="dropdown">
-                <li><%= link_to 'Profile', edit_user_registration_path %></li>
-                <li><%= link_to 'My Friends', user_path(current_user) %></li>
+                <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
+                <li><%= link_to 'My Profile', user_path(current_user) %></li>
               </ul>
             </li>
 
             <%- if current_user.profile_photo? -%>
               <li class="profile-photo hide-for-small"><%= link_to image_tag(current_user.profile_photo, class: "photo"),
-                edit_user_registration_path %>
+                user_path(current_user) %>
               </li>
             <%- else -%>
-              <li class="profile-photo hide-for-small"><%= link_to image_tag("defaultavatar.jpg", class: "photo"), edit_user_registration_path %>
+              <li class="profile-photo hide-for-small"><%= link_to image_tag("defaultavatar.jpg", class: "photo"), user_path(current_user) %>
               </li>
             <%- end -%>
 

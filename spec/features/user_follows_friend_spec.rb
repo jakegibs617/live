@@ -58,7 +58,7 @@ feature 'user follows friend', %{
     click_on "Find Friends"
     first('.user').click_link('Add Friend')
 
-    click_on "My Friends"
+    click_on "My Profile"
     click_link('Unfollow')
 
     expect(page).to have_content(user1.username)
