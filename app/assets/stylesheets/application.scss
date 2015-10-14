@@ -140,10 +140,11 @@ $icon-size: 0.75rem;
 @media only screen and (min-width: 768px) {
   body {
     background-color: $jet;
-    background-image: image-url("background.jpg");
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: 100%;
+    background: image-url("background.jpg") no-repeat center center fixed;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
   }
 }
 
@@ -313,8 +314,10 @@ a {
 }
 
 .user-profile {
+  height: 100%;
+  width: 100%;
   background-color: $third;
-  padding: 5%;
+  padding-top: 2.5%;
   border-color: $jet;
   border-style: solid;
   border-width: medium;
@@ -323,6 +326,6 @@ a {
 .username-header{
   font-weight: bold;
   color: $jet;
-  font-size: 1.5rem;
-
+  font-size: 1rem;
+  padding-top: 2%;
 }
