@@ -302,18 +302,12 @@ a {
     height: 50%;
     width: 50%;
   }
-  .small-image {
-    display: none;
-  }
 }
 
 //desktop
 @media only screen and (min-width: 768px) {
-  .small-image {
-    height: 100%;
-    width: 100%;
-  }
   .comment-photo {
-    display: none;
+    height: 80%;
+    width: 80%;
   }
 }
