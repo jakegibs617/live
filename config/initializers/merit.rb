@@ -4,8 +4,8 @@ end
 
 badges = [
   { id: 1,
-   name: "party starter badge",
-   custom_fields: { image: "/event_1.png" } },
+    name: "party starter badge",
+    custom_fields: { image: "/event_1.png" } },
   { id: 2, name: 'Novice Commenter',
     custom_fields: { image: "/comment_1.png" } },
   { id: 3, name: 'Novice Rater',
