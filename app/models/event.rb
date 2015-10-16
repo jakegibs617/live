@@ -16,7 +16,7 @@ class Event < ActiveRecord::Base
   belongs_to :owner, class_name: "User"
 
   def votes_order
-    comments.sort_by { |comment| comment.body }
+    comments.sort_by { |comment| comment.rating }.reverse!
   end
 
   def self.search(search)

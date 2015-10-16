@@ -3,23 +3,25 @@
 ## Description
 A rails app set to assist the nights a person wants to go out with friends
 but doesn't know where people are going. Great app to hang out with people you
-know and don't know.
+know and don't know. 
 
 [Click Here To View Heroku Application](https://live-events.herokuapp.com/)
 
 [Trello Storyboard](https://trello.com/b/oZAUPcCn/live-app)
 
 ## Challenges faced
-* Building a Friend to Friend user experience
+* Building a Friend to Friend association
 * CRUD Actions where logical for users, events, comments
 * Profile photo through AWS
+* Creating a badge system for users
+* Making the app mobile friendly
+* incorporating the google map api for events
 
 ## Setting up locally
 * First clone down the repo, load the schema
 
  $ bundle
- $ rake db:create
- $ rake db:migrate
+ $ rake db:setup
  $ rails s
 
 * visit [your application](http://localhost:3000)
