@@ -3,7 +3,7 @@
 ## Description
 A rails app set to assist the nights a person wants to go out with friends
 but doesn't know where people are going. Great app to hang out with people you
-know and don't know. 
+know and don't know.
 
 [Click Here To View Heroku Application](https://live-events.herokuapp.com/)
 
@@ -30,4 +30,4 @@ know and don't know.
 [user stories](https://docs.google.com/document/d/1iNel0_NQ5RvcUj8T4u3-QJ7Zgijd-ibiCckgvLcwbUo/edit?usp=sharing)
 
 ## ER Diagram
-[ER Diagram](http://i.imgur.com/hIzXY37.png)
+![ER Diagram](http://i.imgur.com/hIzXY37.png)
